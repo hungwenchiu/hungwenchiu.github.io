@@ -1,11 +1,11 @@
 .header {
-    padding-top: 15rem;
+    padding: 15rem 20rem 15rem 20rem;
     color: $color-grey-dark-1;
     line-height: 1;
 
     display: grid;
     // grid-template-rows: 10vh 90vh;
-    grid-template-columns: 1fr repeat(2, max-content) 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     justify-items: center;
     align-items: center;
 
@@ -15,19 +15,28 @@
 
 
     &__img {
-        grid-column: 2 / 3;
+        justify-self: end;
         display: inline-block;
         height: auto;
         width: 45rem;
         border-radius: 50% 50%;
         margin-right: 5rem;
+
+        @media only screen and (max-width: 1400px) {
+            justify-self: center;
+            margin-bottom: 5rem;
+        }
     }
 
     &__text {
-        grid-column:  3 / 4;
+        justify-self: start;
         font-size: 2rem;
         display: inline-block;
-        width: 25vw;
+        width: 100%;
+
+        @media only screen and (max-width: 1400px) {
+            justify-self: center;
+        }
 
         &__title {
             text-transform: uppercase;
