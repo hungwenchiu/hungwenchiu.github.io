@@ -1,0 +1,52 @@
+.header {
+    color: $color-grey-dark-1;
+    line-height: 1;
+
+    display: grid;
+    // grid-template-rows: 10vh 90vh;
+    grid-template-columns: 1fr repeat(2, max-content) 1fr;
+    justify-items: center;
+    align-items: center;
+
+    // animation: moveInBottom;
+    // animation-duration: 1s;
+    // animation-timing-function: ease-out;
+
+
+    &__img {
+        grid-column: 2 / 3;
+        display: inline-block;
+        height: auto;
+        width: 45rem;
+        border-radius: 50% 50%;
+        margin-right: 5rem;
+    }
+
+    &__text {
+        grid-column:  3 / 4;
+        font-size: 2rem;
+        display: inline-block;
+        width: 25vw;
+
+        &__title {
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 4rem;
+        }
+
+        &__intro {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 2rem;
+        }
+
+        &__content {
+            color: $color-grey-dark-2;
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
+        
+    }
+
+}

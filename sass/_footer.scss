@@ -1,0 +1,32 @@
+.footer {
+    padding: 2rem 0 2rem 0;
+    background-color: $color-grey-dark-1;
+    height: 15rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    align-items: center;
+    justify-items: center;
+
+    &__nav{
+        display: grid;
+        grid-template-columns: repeat(5, max-content);
+        align-items: center;
+        column-gap: 2rem;   
+    }
+
+
+    &__icon {
+        display: inline-block;
+        height: 5rem;
+        width: auto;
+
+        &__linkedin {
+            grid-column: 1 / 2;
+        }
+
+        &__linkedin {
+            grid-column: 1 / 2;
+        }
+    }
+}
