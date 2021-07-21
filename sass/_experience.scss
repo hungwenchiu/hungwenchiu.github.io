@@ -49,7 +49,7 @@
         &-2,
         &-3 {
             display: grid;
-            grid-template-columns: 20% 1fr 10% 1fr;
+            grid-template-columns: 15% 1fr max-content 1fr;
             grid-gap: 5rem;
             // align-items: center;
             justify-items: center;
@@ -98,9 +98,9 @@
         display: grid;
         width: 100%;
         grid-template-rows: repeat(3, 1fr);
-        row-gap: 2rem;
+        // row-gap: 1rem;
         align-items: center;
-        padding: 0 2rem 0 2rem;
+        padding: 0 1rem 0 1rem;
         // transition: all, 10s;
 
         &__content {

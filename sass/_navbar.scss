@@ -6,7 +6,7 @@
     align-items: center;
     
     &__name {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 800;
         padding-left: 2rem;
         display: inline-block;
@@ -31,7 +31,7 @@
     }
 
     &__title {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         display: inline-block;
     }
 
@@ -45,14 +45,10 @@
         column-gap: 2rem;
         align-items: center;
         justify-items: end;
-
-        // &__item {
-        //     display: block;
-        // }
         
         &__link,
         &__link:visited {
-            font-size: 1.4rem;
+            font-size: 1.7rem;
             color: $color-grey-dark-1;
             text-decoration: none;
             text-transform: uppercase;
@@ -66,7 +62,7 @@
 
         &__link:hover,
         &__link:active {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
         }
     }
    

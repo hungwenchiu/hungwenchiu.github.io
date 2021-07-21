@@ -5,10 +5,11 @@
 
 .heading-1 {
     @extend %heading; // copy %heading
-    font-size: 4.5rem;
+    font-size: 6.5rem;
     color: $color-grey-dark-1;
     line-height: 1;
     font-weight: 800;
+    transform: translateX(-8px);
 }
 
 .heading-2 {
@@ -36,7 +37,7 @@
 
 .heading-tertiary {
     color: #555;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     // margin-bottom: 5rem;
     // text-transform: uppercase;
 }
@@ -44,7 +45,7 @@
 
 .heading-date {
     color: $color-grey-dark-1;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 100;
 }
 
@@ -52,21 +53,22 @@
 .heading-project-title {
     line-height: 2;
     color: $color-grey-dark-1;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 800;
     margin-bottom: 2rem;
+    transform: translateY(-8px);
 }
 
 .paragraph {
 
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 100;
     color: #000;
     display: inline-block;
     margin: 2rem 0 2rem 0;
 
     &__ul {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         color: #000;
         line-height: 2;
         // padding: .5rem 0 2rem 0;
