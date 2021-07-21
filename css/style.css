@@ -197,6 +197,7 @@ body {
       transform: translateY(-3px); }
 
 .header {
+  padding-top: 15rem;
   color: #333;
   line-height: 1;
   display: grid;
@@ -222,11 +223,12 @@ body {
     .header__text__intro {
       font-size: 2rem;
       display: block;
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      text-transform: uppercase; }
     .header__text__content {
       color: #777;
       font-size: 1.5rem;
-      line-height: 1.5; }
+      line-height: 2; }
 
 .education {
   padding-left: 20rem;
