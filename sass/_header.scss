@@ -61,3 +61,36 @@
     }
 
 }
+.download_resume {
+    margin-top: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    color: $color-grey-dark-2;
+
+    font-size: 1.5rem;
+
+    &:hover,
+    &:active {
+        animation: pulsate 1s infinite;
+        transition: all .5s infi;
+    }
+}
+
+// btn-inline customerize animation
+@keyframes pulsate {
+    0% {
+        transform: scale(1); // in the beginning, we do not have any effect
+        color: $color-grey-dark-2;
+    }
+
+    50% {
+        transform: scale(1.5);
+        color: $color-grey-dark-1;
+    }
+
+    100% {
+        transform: scale(1); // in the end, we do not have any effect
+        color: $color-grey-dark-2;
+    }
+
+}

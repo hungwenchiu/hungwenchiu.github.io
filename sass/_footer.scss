@@ -12,7 +12,8 @@
         display: grid;
         grid-template-columns: repeat(5, max-content);
         align-items: center;
-        column-gap: 2rem;   
+        column-gap: 2rem;  
+        list-style-type: none;
     }
 
 
@@ -20,6 +21,7 @@
         display: inline-block;
         height: 5rem;
         width: auto;
+        fill: $color-grey-light-1;
 
         &__linkedin {
             grid-column: 1 / 2;

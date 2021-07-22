@@ -239,6 +239,27 @@ body {
       font-size: 1.7rem;
       line-height: 2; }
 
+.download_resume {
+  margin-top: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  color: #777;
+  font-size: 1.5rem; }
+  .download_resume:hover, .download_resume:active {
+    animation: pulsate 1s infinite;
+    transition: all .5s infi; }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    color: #777; }
+  50% {
+    transform: scale(1.5);
+    color: #333; }
+  100% {
+    transform: scale(1);
+    color: #777; } }
+
 .education {
   padding-left: 20rem;
   padding-right: 20rem;
@@ -506,11 +527,13 @@ body {
     display: grid;
     grid-template-columns: repeat(5, max-content);
     align-items: center;
-    column-gap: 2rem; }
+    column-gap: 2rem;
+    list-style-type: none; }
   .footer__icon {
     display: inline-block;
     height: 5rem;
-    width: auto; }
+    width: auto;
+    fill: #faf9f9; }
     .footer__icon__linkedin {
       grid-column: 1 / 2; }
     .footer__icon__linkedin {
