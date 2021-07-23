@@ -1,7 +1,7 @@
 .education {
 
-    padding-left: 20rem;
-    padding-right: 20rem;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 10rem;
     padding-bottom: 5rem;
 
@@ -22,6 +22,15 @@
         height: 100%;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
+        margin-bottom: 10rem;
+
+        @media only screen and (max-width: 1200px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            row-gap: 5rem;
+            justify-items: center;
+        }
+
     }
 }
 
@@ -35,22 +44,40 @@
     width: 30rem;
     display: inline-block;
 
+    @media only screen and (max-width: 1200px) {
+        width: 30rem;
+        height: 70rem;
+        display: grid;
+        // grid-template-columns: repeat(3, max-content);
+        grid-template-rows: repeat(2, max-content);
+        justify-items: center;
+    }
+
     &-1 {
-        grid-column: 1 / 2;
+
+        @media only screen and (max-width: 1200px) {
+            grid-row: 1 / 2;
+        }
     }
 
     &-2 {
-        grid-column: 2 / 3;
+        // grid-column: 2 / 3;
+        @media only screen and (max-width: 1200px) {
+            grid-row: 2 / 3;
+        }
     }
 
     &-3 {
-        grid-column: 3 / -1;
+        // grid-column: 3 / -1;
+        @media only screen and (max-width: 1200px) {
+            grid-row: 3 / -1;
+        }
     }
 
     
     &__side {
         // background-color: orangered;
-        height: 52rem;
+        height: 53rem;
         transition: all .8s ease;
         position: absolute;
         top: 0;
@@ -62,14 +89,37 @@
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-grey-dark-1, .15);
 
+        @media only screen and (max-width: 1200px) {
+            position: relative;
+            height: 45rem;
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+
+            // align-items: center;
+        }
+
 
          // 1 side for front, 1 side for back
         &-front {
             background-color: #fff;
+            grid-row: 1 / 2;
+
+            // @media only screen and (max-width: 1200px) {
+            //     display: grid;
+            //     grid-template-columns: repeat(2, max-content);
+            //     grid-template-rows: repeat(2, max-content);
+            // }
         }
 
         &-back{
             transform: rotateY(180deg);
+
+            @media only screen and (max-width: 1200px) {
+                grid-row: 2 / 3;
+                height: 25rem;
+                transform: none;
+
+            }
 
             &-1 {
                 background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
@@ -87,50 +137,27 @@
 
     &:hover &__side-front {
         transform: rotateY(-180deg);
+
+        @media only screen and (max-width: 1200px) {
+            transform: none;
+        }
     }
 
     &:hover &__side-back {
         transform: rotateY(0);
-    }
 
-    &__heading {
-        font-size: 2.8rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        text-align: right;
-        color: #fff;
-        position: absolute;
-        top: 12rem;
-        right: 2rem;
-        width: 75%;
-    }
-
-    &__heading-span {
-        padding: 1rem 1.5rem;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-
-        &-1 {
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-secondary-light, .85), 
-            rgba($color-secondary-dark, .85));
-        }
-
-        &-2 {
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-primary-light, .85), 
-            rgba($color-primary-dark, .85));
-        }
-
-        &-3 {
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-tertiary-light, .85), 
-            rgba($color-tertiary-dark, .85));
+        @media only screen and (max-width: 1200px) {
+            transform: none;
         }
     }
+
 
     &__details {
         padding: 3rem;
+
+        @media only screen and (max-width: 1200px) {
+            transform: translateY(-3rem);
+        }
 
         ul {
             list-style: none;
@@ -159,47 +186,36 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         border-top-left-radius: 3px;
         border-top-left-radius: 3px;
+
+        @media only screen and (max-width: 1200px) {
+            grid-column: 1 / 2;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
       
 
         &-1 {
             background-image: url("../img/cmu.png");
             background-repeat: no-repeat;
             background-position: center center;
+            object-fit: contain;
         }
 
         &-2 {
             background-image: url(../img/nthu.png);
             background-repeat: no-repeat;
             background-position: center center;
+            object-fit: contain;
         }
 
         &-3 {
             background-image: url(../img/nsysu.png);
             background-repeat: no-repeat;
             background-position:center center;
+            object-fit: contain;
             
         }
 
-    }
-
-    &__details {
-        padding: 3rem;
-
-        ul {
-            list-style: none;
-            width: 80%;
-            margin: 0 auto;
-
-            li {
-                text-align: center;
-                font-size: 1.5rem;
-                padding: 1rem;
-
-                &:not(:last-child) {
-                    border-bottom: 1px solid $color-grey-light-2;
-                }
-            }
-        }
     }
 
     // back side styling
@@ -211,17 +227,32 @@
         width: 90%;
         text-align: center;
 
+        @media only screen and (max-width: 1200px) {
+            font-size:2rem;
+            width: 60%;
+        }
+
         &__text {
             font-size:2.4rem;
             text-transform: uppercase;
             color: #fff;
             margin-bottom: 8rem;
+
+            @media only screen and (max-width: 1200px) {
+                font-size:2rem;
+                margin-bottom: 3rem;
+            }
+      
         }
 
         &__btn {
             font-size:2.4rem;
             text-transform: uppercase;
             color: #fff;
+
+            @media only screen and (max-width: 1200px) {
+                font-size:2rem;
+            }
         }
     }
 
