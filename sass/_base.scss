@@ -43,6 +43,8 @@ html {
 }
 
 body {
+    height: auto;
+    width: 100vw;
     font-family: $font-primary;
     background-color:$bg-overlay-color-1;
     color: $color-grey-dark-2;
