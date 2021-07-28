@@ -46,7 +46,7 @@ var gotoEducation = (e) => {
 
 };
 
-var gotoProject = (e) => {
+var gotoProjects = (e) => {
     // e.preventDefault();
     $('.content').removeClass('fadeIn-active');
     $('.content').addClass('fadeOut-active');
@@ -78,3 +78,23 @@ $(document).ready(() => {
     $('.content').load('introduction.html .header');
     
 });
+
+var navBtnExperiecne = () => {
+    $('.navigation__checkbox').prop('checked', false);
+    gotoExperiecne();
+};
+
+var navBtnEducation = () => {
+    $('.navigation__checkbox').prop('checked', false);
+    gotoEducation();
+};
+
+var navBtnProjects = () => {
+    $('.navigation__checkbox').prop('checked', false);
+    gotoProjects();
+};
+
+var navBtnGotoHome = () => {
+    $('.navigation__checkbox').prop('checked', false);
+    gotoHome();
+};

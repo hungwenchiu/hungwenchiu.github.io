@@ -4,6 +4,15 @@
     grid-template-columns: max-content max-content 1fr;
     color: $color-grey-dark-1;
     align-items: center;
+
+    @media only screen and (max-width: 56.25em) {
+        visibility: hidden;
+    }
+
+        
+    @media only screen and (max-width: 37.5em) {
+        visibility: hidden;
+    }
     
     &__name {
         font-size: 2rem;

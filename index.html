@@ -25,11 +25,30 @@
                 <ul class="navbar__nav">
                     <li class="navbar__nav__item"><a href="#" class="navbar__nav__link" onClick="gotoExperiecne()" >Work Experiecne</a></li>
                     <li class="navbar__nav__item"><a href="#" class="navbar__nav__link" onClick="gotoEducation()">Education</a></li>
-                    <li class="navbar__nav__item"><a href="#" class="navbar__nav__link" onClick="gotoProject()">Projects</a></li>
+                    <li class="navbar__nav__item"><a href="#" class="navbar__nav__link" onClick="gotoProjects()">Projects</a></li>
                 </ul>
             </div>
-        
         </nav>
+
+        <!-- for laptop and phone view -->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link" onClick="navBtnGotoHome()">About</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link" onClick="navBtnExperiecne()">Work Experiecne</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link" onClick="navBtnEducation()">Education</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link" onClick="navBtnProjects()">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
 
         <div class="content">
         </div>
