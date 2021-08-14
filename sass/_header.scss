@@ -65,9 +65,11 @@
     margin-top: 2rem;
     text-decoration: none;
     display: inline-block;
-    color: $color-grey-dark-2;
+    color: red;
 
     font-size: 1.5rem;
+
+    
 
     &:hover,
     &:active {
@@ -80,17 +82,17 @@
 @keyframes pulsate {
     0% {
         transform: scale(1); // in the beginning, we do not have any effect
-        color: $color-grey-dark-2;
+        color: red;
     }
 
     50% {
         transform: scale(1.5);
-        color: $color-grey-dark-1;
+        // color: red;
     }
 
     100% {
         transform: scale(1); // in the end, we do not have any effect
-        color: $color-grey-dark-2;
+        color: red;
     }
 
 }
